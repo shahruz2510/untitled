@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
           onPressed: (){
             Navigator.pushNamed(context, DetailPage.id);
           },
-          child: Text('Open Detail Page'),
+          child: const Text('Open Detail Page'),
           ),
 
         ),
