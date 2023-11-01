@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/detail_page.dart';
 class HomePage extends StatefulWidget {
   static final String id = 'home_page';
   const HomePage({super.key});
@@ -10,10 +11,20 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text('Hello,Asshole'),
-      ),
+        child: TextButton(
+          style: TextButton.styleFrom(
+            foregroundColor: Colors.blue,
+          ),
+          onPressed: (){
+            Navigator.pushNamed(context, DetailPage.id);
+          },
+          child: Text('Open Detail Page'),
+          ),
+
+        ),
+
     );
   }
 }
